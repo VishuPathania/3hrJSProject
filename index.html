@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div> 
+        <form onsubmit="savetoLocalStorage(event)">
+            <div class="form-group">
+                <label for="expense">Choose Expense Amount</label>
+                <input type="text" class="form-control" id="expense" name="expense" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Choose Description</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Choose a Category</label>
+                <select class="form-control" id="category" name="category" style="background-color: rgb(228, 227, 226);" required>
+                    <option value="">Select a Category</option>
+                    <option value="movies">Movies</option>
+                    <option value="games">Games</option>
+                    <option value="travel">Travel</option>
+                    <option value="study">Study</option>
+                    <option value="college_fee">Miscellaneous</option>
+                </select>
+           
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" class="form-control" id="amount" name="amount" required>
+          
+            <input type="submit" class="btn btn-info" value="Add Expense">
+        </form>
+        <ul id="listofitems"></ul>
+    </div>
+    <script src="dom.js"></script>
+</body>
+</html>
